@@ -8,5 +8,5 @@ RUN apt-get update && apt-get -y upgrade && \
 RUN mkdir bitcash && cd bitcash
 RUN curl -o bitcash.tar.gz https://www.bitcoinunlimited.info/downloads/bch-unlimited-1.8.0.0-linux64.tar.gz
 RUN tar -xvf bitcash.tar.gz --strip-components 1
-ENTRYPOINT ["/bin/bitcoind", "-datadir", "/data"]
+ENTRYPOINT ["/bin/bitcoind", "-datadir=/data"]
 
